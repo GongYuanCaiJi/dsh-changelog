@@ -1,0 +1,10 @@
+# dsh-changelog bundle layer.
+#
+# When this package is listed in a profile's dsh.profile.bundles, this patch
+# is applied over the profile composition: it INSERTS one plugin row.
+# Users override the row's whole `config` in their own cordis.patch.yml
+# (later layers win; a patch REPLACES the entire config, it does not merge).
+- insert:
+    - id: cmd-changelog
+      name: 'dsh-changelog'
+      config: {}
