@@ -31,8 +31,11 @@ curl -sL https://registry.npmjs.org/@noice-tech/pi-changelog/-/pi-changelog-1.3.
 cmp package/prompts/unreleased.md              prompts/unreleased.md                && echo "unreleased.md OK"
 
 # exactly the .pi/ -> .dsh/ rewrites, nothing else
-diff -u package/prompts/release-notes.md       prompts/release-notes.md             | grep -E '^[+-]' | grep -v '^[+-][+-]' | grep -vc '\.pi/'   # expect 0
-diff -u package/prompts/setup-release-notes-style.md prompts/setup-release-notes-style.md | grep -E '^[+-]' | grep -v '^[+-][+-]' | grep -vc '\.pi/' # expect 0
+# (normalize the upstream refs, then require byte-identity; the old
+#  `grep -vc '\.pi/'` check could never return 0 for a correct port because
+#  the `+` lines contain `.dsh/`, not `.pi/`)
+diff -u <(sed 's/\.pi\//.dsh\//g' package/prompts/release-notes.md)             prompts/release-notes.md             # expect no output
+diff -u <(sed 's/\.pi\//.dsh\//g' package/prompts/setup-release-notes-style.md) prompts/setup-release-notes-style.md # expect no output
 ```
 
 Expected SHA-256 of the three shipped files:

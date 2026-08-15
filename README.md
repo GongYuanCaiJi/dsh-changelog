@@ -14,7 +14,7 @@
 ## ✨ 功能
 
 - 📝 **从 git 历史生成发布说明** —— `/release-notes <version|from..to>` 解析 GitHub Release、PR 与提交，写出公开文案
-- 🔍 **预览未发布改动** —— `/unreleased` 审计最近一个 tag 以来的合并 PR，不创建 tag、release、commit 或文件
+- 🔍 **预览未发布改动** —— `/unreleased` 审计最近一个 tag 以来的合并 PR，不创建 tag、release、commit、分支或文件
 - 🎨 **仓库专属文风** —— `/setup-release-notes-style` 生成 `.dsh/release-notes-style.md`，让发布说明贴合你的产品受众与语气
 - 🔒 **隐私安全** —— 公开文案排除链接、PR 号、commit 哈希、私有 URL 与内部备注；来源审计单独写进 `.dsh/tmp/`，不进公开文件
 - 🧭 **来源优先级明确** —— `Public summary` → `Context` → Release body → PR title → commit message，逐级回退
@@ -122,6 +122,7 @@ MIT。上游 [`@noice-tech/pi-changelog`](https://www.npmjs.com/package/@noice-t
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![DSH](https://img.shields.io/badge/DSH-DeepSeek%20Harness-blue.svg)](https://github.com/deepseek-ai/deepseek-harness)
+[![Port of](https://img.shields.io/badge/port%20of-pi--changelog-orange.svg)](https://www.npmjs.com/package/@noice-tech/pi-changelog)
 
 > **One line: type `/unreleased` to preview unreleased changes, or `/release-notes <version>` to generate release notes from git history — public copy and private source audit are written separately, so sensitive details never leak into the public file.**
 

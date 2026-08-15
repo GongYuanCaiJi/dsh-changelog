@@ -1,4 +1,4 @@
-# E2E acceptance evidence — issue #24
+# E2E acceptance evidence
 
 These two files are the **actual outputs** of the acceptance run required by the ticket:
 
