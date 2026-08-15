@@ -35,8 +35,8 @@ Needs cleanup: 3
 
 ## Public candidates
 
-- 公开发布 dsh 全家桶到 npm
-  Source: #2519 feat/npm-public
+- 移除首次启动的全屏 beta 提示，遥测保持默认关闭
+  Source: #2470 feat/remove-beta-notice
 - 统一 Web UI 引导弹窗流程
   Source: #2503 agent/onboarding-modal-flow
 - Web UI 新增英文引导文案
@@ -154,8 +154,8 @@ Needs cleanup: 3
 
 ## Public candidates
 
-- Publish the dsh family publicly on npm
-  Source: #2519 feat/npm-public
+- Remove the full-screen beta notice on first launch; telemetry stays off by default
+  Source: #2470 feat/remove-beta-notice
 - Unify web UI onboarding dialogs
   Source: #2503 agent/onboarding-modal-flow
 - Add English onboarding copy to the web UI
