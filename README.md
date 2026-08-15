@@ -104,7 +104,7 @@ npm test         # 构建后跑单元测试（node --test）
 
 ```bash
 P=verify-$(date +%s)-$$
-dsh plugin --profile "$P" add ./dsh-changelog
+dsh plugin --profile "$P" add .
 dsh --profile "$P"
 ```
 
@@ -226,7 +226,7 @@ End-to-end acceptance (disposable profile, deleted after use):
 
 ```bash
 P=verify-$(date +%s)-$$
-dsh plugin --profile "$P" add ./dsh-changelog
+dsh plugin --profile "$P" add .
 dsh --profile "$P"
 ```
 
