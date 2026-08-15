@@ -1,0 +1,9 @@
+- First-run onboarding now uses a single unified dialog flow that covers the testing-stage notice and provider key setup.
+- English copy is now available in the first-run onboarding flow.
+- The full-screen beta notice no longer appears on first launch, and telemetry stays off by default.
+- Session lists now show the newest sessions first by default.
+- Blank sessions no longer appear in recent session lists.
+- Model settings no longer lists providers that can only be used through OAuth sign-in.
+- Older trajectory history can be loaded again in the web UI.
+- The web app now rejects unsupported wildcard host bindings with a clear error message.
+- Composer geometry and collapsed-sidebar motion are aligned in the web UI.

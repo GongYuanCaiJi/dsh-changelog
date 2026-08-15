@@ -18,7 +18,7 @@ export interface PromptSpec {
 }
 
 /** Parse the `---` frontmatter block; metadata values are unquoted. */
-export function parsePromptFrontmatter(text: string): { description: string; argumentHint: string; body: string } {
+export function parsePromptFrontmatter(text: string): Omit<PromptSpec, 'name'> {
   const lines = text.split('\n');
   if (lines[0]?.trim() !== '---') {
     throw new Error('prompt file must start with a YAML frontmatter block');
